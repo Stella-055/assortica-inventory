@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './navbar.js';
+import {  Routes, Route ,useLocation } from 'react-router-dom';
+import Item from './item.js';
+import Additem from './additem.js';
+import Removeitem from './removeitem.js';
+import Login from './login.js';
 
 function App() {
+  const location = useLocation();
+  const showNavbar = location.pathname !== '/';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {showNavbar && <Navbar />}
+    
+     <Routes>
+     <Route path='/'element={<Login/>}/>
+     <Route path='/Home'element={<Item/>}/>
+      <Route path='/add'element={<Additem names="Item Name" amount="Item quantity" date="Date added"/>}/>
+      <Route path='/remove'element={<Removeitem name="Item name" amount="Item quantity" date="Date removed"/>}/>
+     </Routes>
     </div>
   );
 }

@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+body{
+  background-image: url('../public/Free\ Photo\ _\ Interior\ of\ a\ large\ logistics\ warehouse\ Ai\ generative.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height:100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav .personpic{
+  height: 100px;
+ width: auto;
+}
+.navhead{
+  display: flex;
+  color: black;
+  background-color: #f2f2f2;
+justify-content: space-between;
+align-items: center;
+  margin-bottom: 0;
+}
+.navdiv1{
+  display: block;
+
+  align-items: center;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navdiv2{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navimg{
+  height: 25px;
+  width: auto;
+  margin-right: 5px;
+}
+.navsearchinput{
+ background-color: gainsboro;
+ border-radius: 30px;
+ color: black;
+ border: none;
+ height: 30px;
+ width: 300px;
+ padding: 10px;
+ margin-top: 3px;
+}
+.navlist{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.navlink{
+ text-decoration:underline;
+ color: black;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.navlink:hover{
+background-color: #333;
+padding: 10px;
+border-radius: 20px;
+color: #ddd;
+}
+.active {
+  background-color: #333;
+  color: #ccc;
+  padding: 10px;
+border-radius: 20px;
+}
+.navdiv3{
+  padding-bottom: 0;
+}
+.itemdiv1{
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 0;
   color: white;
 }
+.itemdiv1 button{
+  padding: 10px;
 
-.App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  
 }
+
+/* Table header styling */
+ thead  {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border: 2px solid #ddd;
+  width: 100%;
+
+}
+
+/* Table header cells styling */
+thead th {
+  padding: 15px;
+  font-weight: bold;
+}
+
+
+/* Table body cells styling */
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+tbody tr button{
+  padding: 9px;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+  color: #333;
+  margin-top: 5px;
+ 
+}
+
+/* Table row hover effect */
+ tbody tr:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Optional: Alternate row color */
+ tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+  color: #333;
+ 
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+/* Style the form elements */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.form-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input field styling */
+
+.form-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.form-container button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+
+
