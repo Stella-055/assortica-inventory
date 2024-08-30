@@ -26,7 +26,7 @@ function Removeitem({name,amount,date}) {
     e.preventDefault(); // Prevent form submission reload
 
     try {
-      const response = await fetch('http://localhost:5000/remove', {
+      const response = await fetch('https://assortica-inventory.onrender.com/remove', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

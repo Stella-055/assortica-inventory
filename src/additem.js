@@ -23,7 +23,7 @@ function Additem( {names,amount,date}) {
   // Example using fetch in your React component
 const addItems = async (name, quantity) => {
   try {
-    const response = await fetch('http://localhost:5000/add', {
+    const response = await fetch('https://assortica-inventory.onrender.com/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

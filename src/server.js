@@ -4,21 +4,22 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your frontend's origin
+  origin: 'https://assortica.netlify.app/', // Replace with your frontend's origin
   methods: 'GET,POST,PUT,DELETE',
   credentials: true, // If you need to send cookies or authorization headers
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+const MONGODB_URI = process.env.MONGODB_URI;
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/assorticaenterprises')
+mongoose.connect( MONGODB_URI)
 .then(() => {
   console.log('Connected to items MongoDB');
 }).catch((err) => {

@@ -22,7 +22,7 @@ function Item() {
   }
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/home/${id}`, {
+      const response = await fetch(`https://assortica-inventory.onrender.com/home/${id}`, {
         method: 'DELETE',
       })
       console.log(response)
@@ -39,7 +39,7 @@ function Item() {
   };
   useEffect(() =>{fetchItems()},[])
   const fetchItems = async () => {try {
-    const response = await fetch('http://localhost:5000/home'); // Replace with your API URL
+    const response = await fetch('https://assortica-inventory.onrender.com/home'); // Replace with your API URL
     if (!response.ok) {
       throw new Error('Failed to fetch data');
     }
