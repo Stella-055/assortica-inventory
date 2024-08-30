@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 
 app.use(cors({
-  origin: 'https://assortica.netlify.app/', // Replace with your frontend's origin
+  origin: 'https://assortica.netlify.app', // Replace with your frontend's origin
   methods: 'GET,POST,PUT,DELETE',
   credentials: true, // If you need to send cookies or authorization headers
 }));
