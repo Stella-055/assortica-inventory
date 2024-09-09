@@ -33,6 +33,7 @@ function Navbar() {
                <li><NavLink className='navlink'activeClassName="active" to="/Home">HOME</NavLink></li>
                <li><NavLink  className='navlink'to="/add" activeClassName="active">ADD</NavLink></li>
                <li> <NavLink  className='navlink'to="/remove" activeClassName="active">REMOVE</NavLink></li>
+               <li> <NavLink  className='navlink'to="/delivery" activeClassName="active">Delivery note</NavLink></li>
                </ul>
                </div>
                <img src={personpic}className='personpic' alt="person"></img>

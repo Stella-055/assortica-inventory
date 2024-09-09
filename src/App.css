@@ -116,7 +116,19 @@ thead th {
   font-weight: bold;
 }
 
+.popup{
+  z-index: 1000;
 
+}
+.popbutton{
+  display: flex;
+justify-content: space-around;
+
+}
+.bb {
+  color: white;
+background-color: blue;
+}
 /* Table body cells styling */
 tbody td {
   padding: 10px;
@@ -183,7 +195,7 @@ tbody tr button{
 /* Button styling */
 .form-container button {
   padding: 10px 15px;
-  background-color: #28a745;
+
   color: white;
   font-size: 16px;
   border: none;
@@ -194,4 +206,16 @@ tbody tr button{
 
 /* Button hover effect */
 
+.popup{
+  z-index: 1000;
 
+}
+.popbutton{
+  display: flex;
+justify-content: space-around;
+
+}
+.bb{
+  color: #f4f4f4;
+background-color: rgb(12, 12, 131);
+}

@@ -1,0 +1,76 @@
+.delivery-note-container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.item button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.item button:hover {
+  background-color: #c0392b;
+}
+
+.download-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color:blue;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.download-button:hover {
+  background-color: rgb(4, 4, 128);
+}

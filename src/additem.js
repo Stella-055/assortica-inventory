@@ -5,6 +5,7 @@ function Additem( {names,amount,date}) {
   const [quantity, setQuantity] = useState('');
   const [tarehe, setTarehe] = useState('');
   const [message, setMessage] = useState('');
+ 
   function keeping1(e){
    let inputname= e.target.value;
    setName(inputname)
@@ -35,7 +36,8 @@ const addItems = async (name, quantity) => {
     if (data.success) {
       setMessage(data.message);  // Set success message
       
-    } else {
+    }
+     else {
       setMessage('Failed to save item.');  // Set error message if saving failed
     }
   } catch (error) {

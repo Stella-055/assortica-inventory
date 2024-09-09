@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React  from 'react'
+import { NavLink } from "react-router-dom";
 
 function Removeitem({name,amount,date}) {
  
@@ -7,10 +8,14 @@ function Removeitem({name,amount,date}) {
   const [quantity1, setQuantity1] = useState('');
   const [date1, setDate1] = useState(''); 
   const [message, setMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
   function change1(e){
     let details= e.target.value;
     setName1(details);
     setMessage("");
+  }
+  function close(){
+    setShowPopup(false)
   }
   function change2(e){
     let details= e.target.value;
@@ -43,6 +48,9 @@ function Removeitem({name,amount,date}) {
       } else {
         setMessage('Failed to remove item.'); // Handle other errors
       }
+      if(data.message==="Item updated successfully"){
+        setShowPopup(true)
+      }
     } catch (error) {
       setMessage('An error occurred while removing the item.');
     }
@@ -60,7 +68,19 @@ function Removeitem({name,amount,date}) {
         <label > {date}</label>
         <input value={date1}  onChange={change3}/>
         <input type='submit' placeholder='Remove'/>
-    </form></div>
+    </form>
+    
+    {showPopup && (<div className="popup">
+
+      <h1> { message}</h1>
+      <p>Would you like to generate a delivery note?</p>
+      <div className="popbutton"> <button  className="bb"> <NavLink  className='navlink'to="/delivery" > YES</NavLink> </button>
+      <button  className="bb"onClick={close}>NO</button>
+      </div>
+    </div>)
+      
+    }</div>
+  
   )
 }
 
